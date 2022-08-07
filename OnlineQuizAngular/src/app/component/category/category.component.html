@@ -1,0 +1,12 @@
+<div class="container" style="margin-top: 10px; margin-left: 100px;">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div *ngFor="let cat of categories" class="col">
+            <div class="card" style="width: 14rem; height: auto;">
+                <div class="card-body" (click)="goToQuiz(cat.categoryId)">
+                    <h1 class="card-title">{{cat.title}}</h1>
+                    <p class="card-text" style="color: darkred;">{{cat.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

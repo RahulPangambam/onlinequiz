@@ -1,0 +1,43 @@
+<div class="container" style="margin: 50px; margin-left: 500px; width: 300px; border: 1px solid lightgray; border-radius: 10px; padding: 20px; background-color:	#F5F5F5;">
+    <form #catForm="ngForm" (ngSubmit)="onSubmit()">
+        <h2>OnlineQuiz</h2>
+        <br>
+        <input type="text" name="categoryName" class="form-control mb-2" placeholder="username" [(ngModel)] = "userName">
+        &nbsp;
+        <input type="password" name="categoryName" class="form-control mb-2" placeholder="password" [(ngModel)] = "password" >
+        <br>
+        <button type="submit" class="btn btn-secondary btn-sm" style="margin-left: 25%; width: 8rem;">Log In</button>
+        <br>
+        <br>
+        <div>
+            <p>Not a user? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" style="text-decoration:none;">SignUp</a></p>
+        </div>
+    </form>
+</div>
+<div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" style="background-color:#F5F5F5;">
+    <div class="modal-dialog" style="width: 20rem;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Sign Up</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form #catForm="ngForm">
+                    <input type="text" name="name" class="form-control mb-2" placeholder="name" [(ngModel)] = "newUser.name" >
+                    <br>
+                    <input type="text" name="email" class="form-control mb-2" placeholder="email" [(ngModel)] = "newUser.email" >
+                    <br>
+                    <input type="text" name="phone" class="form-control mb-2" placeholder="phone" [(ngModel)] = "newUser.phone" >
+                    <br>
+                    <input type="text" name="username" class="form-control mb-2" placeholder="username" [(ngModel)] = "newUser.userName" >
+                    <br>
+                    <input type="password" name="password" class="form-control mb-2" placeholder="password" [(ngModel)] = "newUser.password" >
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-secondary btn-sm" style="margin-left: 6%; width: 8rem;" (click)="onRegSubmit()" data-bs-dismiss="modal" >Sign
+                    Up</button>
+            </div>
+        </div>
+    </div>
+</div>
